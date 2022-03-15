@@ -4,10 +4,8 @@ function defaults(obj, defaultProps) {
   // http://underscorejs.org/#defaults
 
   for (var key in obj) {
-    if (key === defaultProps) {
-      if (obj[key] == null) {
-        obj[defaultProps] = "Male";
-      }
+    if (key === defaultProps && obj[key] == null) {
+      obj[defaultProps] = "Male";
     }
     var newKey = key;
     var newValue = obj[key];
