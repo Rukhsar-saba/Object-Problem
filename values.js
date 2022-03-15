@@ -1,7 +1,11 @@
-function keys(obj) {
-  // Retrieve all the names of the object's properties.
-  // Return the keys as strings in an array.
-  // Based on http://underscorejs.org/#keys
-  console.log(Object.values(obj));
+function values(obj) {
+  // Return all of the values of the object's own properties.
+  // Ignore functions
+  // http://underscorejs.org/#values
+
+  for (var key in obj) {
+    var value = obj[key];
+    console.log(value);
+  }
 }
-keys({ name: "Bruce Wayne", age: 36, location: "Gotham" });
+values({ name: "Bruce Wayne", age: 36, location: "Gotham" });
